@@ -1,5 +1,5 @@
 export { Exception } from './dist/src/Exceptions/Exception';
-export { ExceptionHandler } from './src/Exceptions/exceptionHandler';
+export { ExceptionHandler } from './src/Exceptions/ExceptionHandler';
 export { AccessDeniedHttpException } from './src/Exceptions/AccessDeniedHttpException';
 export { BadRequestHttpException } from './src/Exceptions/BadRequestHttpException';
 export { ConflictHttpException } from './src/Exceptions/ConflictHttpException';
