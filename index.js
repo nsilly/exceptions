@@ -1,4 +1,4 @@
-export { Exception } from './dist/src/Exceptions/Exception';
+export { Exception } from './src/Exceptions/Exception';
 export { ExceptionHandler } from './src/Exceptions/ExceptionHandler';
 export { AccessDeniedHttpException } from './src/Exceptions/AccessDeniedHttpException';
 export { BadRequestHttpException } from './src/Exceptions/BadRequestHttpException';
