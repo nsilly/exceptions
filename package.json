@@ -1,22 +1,23 @@
 {
-  "name": "@codersvn/exceptions",
-  "version": "1.1.0",
+  "name": "@nsilly/exceptions",
+  "version": "1.1.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --forceExit",
-    "build": "rimraf dist && ./node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,error_code.md,README.md --copy-files"
+    "build": "rimraf dist && ./node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,error_code.md,README.md --copy-files",
+    "publish_module": "npm run build && npx @codersvn/npm-auto-version && npm publish --access public && rm -rf dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codersvn/exceptions.git"
+    "url": "git+https://github.com/nsilly/exceptions.git"
   },
   "author": "Hieupv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codersvn/exceptions/issues"
+    "url": "https://github.com/nsilly/exceptions/issues"
   },
-  "homepage": "https://github.com/codersvn/exceptions#readme",
+  "homepage": "https://github.com/nsilly/exceptions#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
