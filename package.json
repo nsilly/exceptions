@@ -1,13 +1,16 @@
 {
   "name": "@nsilly/exceptions",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --forceExit",
     "build": "rimraf dist && ./node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,error_code.md,README.md --copy-files",
-    "publish_module": "npm run build && npx @codersvn/npm-auto-version && npm publish --access public && rm -rf dist",
-    "publish_module_only": "npm run build && npm publish --access public && rm -rf dist"
+    "publish_module": "npm run build && npx @codersvn/npm-auto-version && npm publish && rm -rf dist",
+    "publish_module_only": "npm run build && npm publish && rm -rf dist"
+  },
+  "publishConfig": {
+    "registry": "http://registry.vicoders.com"
   },
   "repository": {
     "type": "git",
