@@ -16,11 +16,13 @@ import {
   HTTP_UNSUPPORTED_MEDIA_TYPE
 } from './HttpStatusCode';
 import { Exception } from './Exception';
+import { App } from '@nsilly/container';
+import { Logger } from '@nsilly/log';
 
 export const ExceptionHandler = function(err, req, res, next) {
   if (process.env.APP_DEBUG === 'true') {
     console.log(err);
-    App.make(Logger).error(err.toString());
+    App.make(Logger).error({ message: err.toString(), stack: err.stack });
   }
 
   const praseStatusCode = e => {
