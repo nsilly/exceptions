@@ -18,7 +18,10 @@ import {
 import { Exception } from './Exception';
 
 export const ExceptionHandler = function(err, req, res, next) {
-  console.log(err);
+  if (process.env.APP_DEBUG === 'true') {
+    console.log(err);
+    App.make(Logger).error(err.toString());
+  }
 
   const praseStatusCode = e => {
     switch (Object.getPrototypeOf(e).constructor.name) {
