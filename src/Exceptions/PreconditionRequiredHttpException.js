@@ -1,3 +1,3 @@
-import { Exception } from './Exception';
+import Exception from './Exception';
 
-export class PreconditionRequiredHttpException extends Exception {}
+export default class PreconditionRequiredHttpException extends Exception {}

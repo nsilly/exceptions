@@ -1,3 +1,3 @@
-import { Exception } from './Exception';
+import Exception from './Exception';
 
-export class NotAcceptableHttpException extends Exception {}
+export default class NotAcceptableHttpException extends Exception {}

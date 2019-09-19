@@ -1,4 +1,4 @@
-export class Exception extends Error {
+export default class Exception extends Error {
   constructor(message, error_code) {
     super(message);
     this.name = this.constructor.name;

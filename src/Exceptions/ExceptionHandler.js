@@ -15,11 +15,11 @@ import {
   HTTP_UNAUTHORIZED,
   HTTP_UNSUPPORTED_MEDIA_TYPE
 } from './HttpStatusCode';
-import { Exception } from './Exception';
+import Exception from './Exception';
 import { App } from '@nsilly/container';
 import { Logger } from '@nsilly/log';
 
-export const ExceptionHandler = function(err, req, res, next) {
+const ExceptionHandler = function(err, req, res, next) {
   if (process.env.APP_DEBUG === 'true') {
     console.log(err);
     App.make(Logger).error({ message: err.toString(), stack: err.stack });
@@ -66,3 +66,5 @@ export const ExceptionHandler = function(err, req, res, next) {
   }
   res.status(praseStatusCode(err)).json({ error_code: err.error_code, message: err.message });
 };
+
+export default ExceptionHandler;

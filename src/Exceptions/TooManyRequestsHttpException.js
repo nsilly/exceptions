@@ -1,3 +1,3 @@
-import { Exception } from './Exception';
+import Exception from './Exception';
 
-export class TooManyRequestsHttpException extends Exception {}
+export default class TooManyRequestsHttpException extends Exception {}

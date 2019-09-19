@@ -1,3 +1,3 @@
-import { Exception } from './Exception';
+import Exception from './Exception';
 
-export class UnauthorizedHttpException extends Exception {}
+export default class UnauthorizedHttpException extends Exception {}

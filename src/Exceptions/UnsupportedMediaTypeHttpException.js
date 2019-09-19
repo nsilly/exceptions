@@ -1,3 +1,3 @@
-import { Exception } from './Exception';
+import Exception from './Exception';
 
-export class UnsupportedMediaTypeHttpException extends Exception {}
+export default class UnsupportedMediaTypeHttpException extends Exception {}
